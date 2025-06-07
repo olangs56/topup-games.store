@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopUp Game Store - Jual Diamond, UC, VP & CP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h2>TopUpGame</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-link active">Home</a></li>
+                <li><a href="#harga" class="nav-link">Harga</a></li>
+                <li><a href="#riwayat" class="nav-link">Riwayat</a></li>
+                <li><a href="#testimonial" class="nav-link">Testimonial</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="container">
+                <div class="product-tabs">
+                    <button class="tab active" data-tab="mobile-legends">
+                        <i class="fas fa-gamepad"></i> Mobile Legends
+                    </button>
+                    <button class="tab" data-tab="free-fire">
+                        <i class="fas fa-fire"></i> Free Fire
+                    </button>
+                    <button class="tab" data-tab="pubg">
+                        <i class="fas fa-crosshairs"></i> PUBG Mobile
+                    </button>
+                    <button class="tab" data-tab="genshin">
+                        <i class="fas fa-magic"></i> Genshin Impact
+                    </button>
+                    <button class="tab" data-tab="honor">
+                        <i class="fas fa-crown"></i> Honor of Kings
+                    </button>
+                    <button class="tab" data-tab="valorant">
+                        <i class="fas fa-bullseye"></i> Valorant
+                    </button>
+                    <button class="tab" data-tab="cod">
+                        <i class="fas fa-gun"></i> Call of Duty
+                    </button>
+                    <button class="tab" data-tab="membership">
+                        <i class="fas fa-crown"></i> Membership
+                    </button>
+                    <button class="tab" data-tab="semua">
+                        <i class="fas fa-th"></i> Semua
+                    </button>
+                </div>
+
+                <div class="order-form-container">
+                    <form id="orderForm">
+                        <div class="form-group">
+                            <label for="userId">User ID</label>
+                            <input type="text" id="userId" placeholder="Masukkan User ID" required>
+                            <small class="form-help">Masukkan User ID game Anda</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="serverId">Server ID (Opsional)</label>
+                            <input type="text" id="serverId" placeholder="Masukkan Server ID">
+                        </div>
+
+                        <div class="product-selection" id="productSelection">
+                            <!-- Products will be loaded here -->
+                        </div>
+
+                        <div class="form-group">
+                            <label for="whatsapp">Nomor WhatsApp</label>
+                            <input type="tel" id="whatsapp" placeholder="Contoh: 08123456789" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="paymentMethod">Metode Pembayaran</label>
+                <select id="paymentMethod" required>
+                    <option value="">Pilih Metode Pembayaran</option>
+                    <option value="qris">QRIS</option>
+                </select>
+                        </div>
+
+                        <div class="checkout-info">
+                            <p><i class="fas fa-info-circle"></i> Pesanan akan diproses otomatis setelah pembayaran dikonfirmasi</p>
+                        </div>
+
+                        <button type="submit" class="checkout-btn">
+                            <i class="fas fa-shopping-cart"></i> CHECKOUT
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="games-section">
+            <div class="container">
+                <h2 class="section-title">Game Populer</h2>
+                <div class="games-grid" id="gamesGrid">
+                    <!-- Popular games will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <section id="harga" class="price-section">
+            <div class="container">
+                <h2 class="section-title">Daftar Harga</h2>
+                <div class="price-grid">
+                    <div class="price-category">
+                        <h3>Mobile Legends</h3>
+                        <div class="price-list">
+                            <div class="price-item">
+                                <span>5 Diamonds</span>
+                                <span>Rp 1.500</span>
+                            </div>
+                            <div class="price-item">
+                                <span>50 Diamonds</span>
+                                <span>Rp 12.000</span>
+                            </div>
+                            <div class="price-item">
+                                <span>100 Diamonds</span>
+                                <span>Rp 24.000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-category">
+                        <h3>Free Fire</h3>
+                        <div class="price-list">
+                            <div class="price-item">
+                                <span>5 Diamonds</span>
+                                <span>Rp 1.000</span>
+                            </div>
+                            <div class="price-item">
+                                <span>50 Diamonds</span>
+                                <span>Rp 8.000</span>
+                            </div>
+                            <div class="price-item">
+                                <span>100 Diamonds</span>
+                                <span>Rp 15.000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="riwayat" class="history-section">
+            <div class="container">
+                <h2 class="section-title">Riwayat Transaksi</h2>
+                <div class="history-list">
+                    <div class="history-item">
+                        <div class="history-header">
+                            <h3>Mobile Legends - 100 Diamonds</h3>
+                            <span class="status success">Berhasil</span>
+                        </div>
+                        <div class="history-details">
+                            <p>ID Transaksi: #ML123456</p>
+                            <p>Tanggal: 25 Nov 2023</p>
+                            <p>Total: Rp 24.000</p>
+                        </div>
+                    </div>
+                    <div class="history-item">
+                        <div class="history-header">
+                            <h3>Free Fire - 50 Diamonds</h3>
+                            <span class="status success">Berhasil</span>
+                        </div>
+                        <div class="history-details">
+                            <p>ID Transaksi: #FF789012</p>
+                            <p>Tanggal: 24 Nov 2023</p>
+                            <p>Total: Rp 8.000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonial" class="testimonial-section">
+            <div class="container">
+                <h2 class="section-title">Testimonial Pelanggan</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Top up instant, langsung masuk ke akun. Pelayanan ramah dan cepat. Recommended!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Ahmad S.</h4>
+                                <p>Mobile Legends Player</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Harga termurah yang pernah saya temukan. Proses cepat dan aman. Pasti akan order lagi!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Budi R.</h4>
+                                <p>Free Fire Player</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial Form Section -->
+                <div class="testimonial-form-section">
+                    <h3 class="form-title">Tulis Testimonial Anda</h3>
+                    <p class="form-subtitle">Bagikan pengalaman Anda berbelanja di TopUpGame</p>
+                    
+                    <form id="testimonialForm" class="testimonial-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="customerName">Nama Lengkap</label>
+                                <input type="text" id="customerName" placeholder="Masukkan nama Anda" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="gameType">Game yang Dibeli</label>
+                                <select id="gameType" required>
+                                    <option value="">Pilih Game</option>
+                                    <option value="Mobile Legends">Mobile Legends</option>
+                                    <option value="Free Fire">Free Fire</option>
+                                    <option value="PUBG Mobile">PUBG Mobile</option>
+                                    <option value="Genshin Impact">Genshin Impact</option>
+                                    <option value="Honor of Kings">Honor of Kings</option>
+                                    <option value="Valorant">Valorant</option>
+                                    <option value="Call of Duty">Call of Duty</option>
+                                    <option value="Membership">Membership</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="rating">Rating Pengalaman</label>
+                            <div class="rating-stars" id="ratingStars">
+                                <span class="star" data-rating="1">★</span>
+                                <span class="star" data-rating="2">★</span>
+                                <span class="star" data-rating="3">★</span>
+                                <span class="star" data-rating="4">★</span>
+                                <span class="star" data-rating="5">★</span>
+                            </div>
+                            <input type="hidden" id="rating" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="testimonialText">Testimonial Anda</label>
+                            <textarea id="testimonialText" rows="4" placeholder="Ceritakan pengalaman Anda berbelanja di TopUpGame..." required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="customerEmail">Email (Opsional)</label>
+                            <input type="email" id="customerEmail" placeholder="email@example.com">
+                            <small class="form-help">Email tidak akan ditampilkan secara publik</small>
+                        </div>
+                        
+                        <button type="submit" class="submit-testimonial-btn">
+                            <i class="fas fa-paper-plane"></i> Kirim Testimonial
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="container">
+                <h2 class="section-title">Mengapa Pilih Kami?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Proses Instant</h3>
+                        <p>Top up langsung masuk ke akun game Anda dalam hitungan detik</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>100% Aman</h3>
+                        <p>Transaksi dijamin aman dengan sistem keamanan terdepan</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-tags"></i>
+                        </div>
+                        <h3>Harga Terbaik</h3>
+                        <p>Dapatkan harga termurah dengan bonus menarik setiap pembelian</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="payment-section">
+            <div class="container">
+                <h2 class="section-title">Metode Pembayaran</h2>
+                <div class="payment-grid">
+                    <div class="payment-category">
+                        <h3>QRIS - Toko Sembako hasbull</h3>
+                        <div class="payment-methods">
+                            <div class="payment-method">
+                                <img src="images/qris.jpg" alt="QRIS Code" style="max-width: 300px; width: 100%; height: auto;">
+                                <div style="margin-top: 1rem; text-align: center;">
+                                    <p style="margin: 0.5rem 0;">NMID: ID102434897968</p>
+                                    <p style="margin: 0.5rem 0;">A01</p>
+                                    <p style="margin: 0.5rem 0; color: #666;">Cek aplikasi penyelenggara di: www.aspi-qris.id</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TopUpGame</h3>
+                    <p>Platform top up game terpercaya dengan harga terbaik dan proses instant. Melayani berbagai game populer dengan sistem keamanan terdepan.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="#">Mobile Legends</a></li>
+                        <li><a href="#">Free Fire</a></li>
+                        <li><a href="#">PUBG Mobile</a></li>
+                        <li><a href="#">Genshin Impact</a></li>
+                        <li><a href="#">Valorant</a></li>
+                        <li><a href="#">Call of Duty</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Bantuan</h4>
+                    <ul>
+                        <li><a href="#">Cara Order</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact-info">
+                    <h4>Kontak</h4>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/message/FQR4IEBCPLEPL1" target="_blank" style="color: inherit; text-decoration: none;">WhatsApp: 081237628611</a></p>
+                    <p><i class="fas fa-envelope"></i> Email: support@topupgame.com</p>
+                    <p><i class="fas fa-clock"></i> Layanan 24/7</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 TopUpGame Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
